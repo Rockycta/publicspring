@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="task" class="com.sfm.in.beans.Task">
+		<property name="taskNo" value="s101" />
+		<property name="taskName" value="deployment" />
+		<property name="calender" ref="cal" />
+	</bean>
+	
+	<bean id="cal" class="java.util.Calendar" factory-method="getInstance"/>
+</beans>
